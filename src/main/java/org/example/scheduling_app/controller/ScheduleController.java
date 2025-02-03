@@ -43,4 +43,12 @@ public class ScheduleController {
         ScheduleResponseDto scheduleResponse = scheduleService.getScheduleById(id);
         return ResponseEntity.ok(scheduleResponse);
     }
+    // 일정 수정
+    @PutMapping("/{id}")
+    public ResponseEntity<ScheduleResponseDto> updateSchedule(
+            @PathVariable Long id,  // URL 경로에서 일정 ID를 받음
+            @RequestBody ScheduleRequestDto dto) {  // 요청 바디에서 수정할 항목들을 받음
+        ScheduleResponseDto response = scheduleService.updateSchedule(id, dto);
+        return ResponseEntity.ok(response);  // 수정된 일정 정보를 HTTP 200 응답으로 반환
+    }
 }

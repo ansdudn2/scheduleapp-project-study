@@ -27,10 +27,20 @@ public class Schedule {
         this.createdAt = createdAt;
         this.updatedAt = createdAt;//최초작성시,수정일은 작성일과 동일하다
     }
+
     //일정 수정 메서드
     public void update(String task,String password){
         this.task=task;
         this.password=password;
         this.updatedAt=LocalDateTime.now();//수정시 현재 시간으로 업데이트
+    }
+    // 작성자명 수정 메서드
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    // 수정일 갱신 메서드
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
