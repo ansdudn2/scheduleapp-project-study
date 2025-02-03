@@ -51,4 +51,16 @@ public class ScheduleController {
         ScheduleResponseDto response = scheduleService.updateSchedule(id, dto);
         return ResponseEntity.ok(response);  // 수정된 일정 정보를 HTTP 200 응답으로 반환
     }
+    // 일정 삭제
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteSchedule(
+            @PathVariable Long id,  // URL 경로에서 일정 ID를 받음
+            @RequestParam String password) {  // 요청 파라미터에서 비밀번호를 받음
+        try {
+            scheduleService.deleteSchedule(id, password);
+            return ResponseEntity.noContent().build();  // 성공적으로 삭제된 경우 204 No Content 응답
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();  // 비밀번호가 일치하지 않으면 403 Forbidden 응답
+        }
+    }
 }
