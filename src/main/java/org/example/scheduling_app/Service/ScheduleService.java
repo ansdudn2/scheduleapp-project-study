@@ -63,4 +63,17 @@ public class ScheduleService {
         // 수정된 일정 저장 후, 응답용 DTO 반환
         return scheduleRepository.saveSchedule(existingSchedule);
     }
+    // 일정 삭제
+    public void deleteSchedule(Long id, String password) {
+        // 기존 일정 조회
+        Schedule existingSchedule = scheduleRepository.findScheduleById(id);
+
+        // 비밀번호 검증
+        if (!existingSchedule.getPassword().equals(password)) {
+            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+        }
+
+        // 일정 삭제
+        scheduleRepository.deleteSchedule(id); // 삭제 메서드 호출
+    }
 }

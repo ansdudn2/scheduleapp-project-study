@@ -59,4 +59,11 @@ public class ScheduleRepository {
                 )
         );
     }
+    // 일정 삭제
+    public void deleteSchedule(Long id) {
+        // 일정 삭제를 위한 SQL 쿼리
+        String sql = "DELETE FROM schedule WHERE id = ?";
+        jdbcTemplate.update(sql, id);
+    }
+
 }
