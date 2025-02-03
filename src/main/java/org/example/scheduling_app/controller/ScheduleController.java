@@ -26,7 +26,7 @@ public class ScheduleController {
         // 클라이언트로부터 받은 DTO를 바탕으로 일정 생성
         ScheduleResponseDto response = scheduleService.createSchedule(dto);
         //SchduleResponseDto로 응답을 반환, 응답상태는 201로 설정
-        return new ResponseEntity<>(scheduleService.createSchedule(dto), HttpStatus.CREATED);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
     // 전체 일정 조회
     @GetMapping
