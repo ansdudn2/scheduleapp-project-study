@@ -5,7 +5,11 @@
 일정을 만들어 일정들을 조회하고 수정하며 삭제할수있게 만드는게 요점입니다.
 
 ## API 명세서 
-![Image](https://github.com/user-attachments/assets/a8060618-1a0e-4fa4-a45f-11653516601e)
+![Image](https://github.com/user-attachments/assets/03e9c8f6-c62a-46ef-a1dc-7666298f3a99)
+![Image](https://github.com/user-attachments/assets/bc974c82-a597-489b-9ece-1d64d9a69d3b)
+![Image](https://github.com/user-attachments/assets/bfd9a823-4946-4a8d-b414-18e202a38533)
+![Image](https://github.com/user-attachments/assets/cb1d5b65-a901-42cc-8283-5e4790b28177)
+![Image](https://github.com/user-attachments/assets/fdb23c87-6e55-4760-bf04-416ecf6cf0fb)
 
 ## ERD
 ![Image](https://github.com/user-attachments/assets/f5a70427-9bf6-4f2f-b042-1ced8631a217)
